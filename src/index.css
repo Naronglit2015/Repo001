@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Specify a suitable font family */
+  
+}
+
+.app {
+  background: rgb(40,127,142);
+background: radial-gradient(circle, rgba(40,127,142,1) 0%, rgba(12,68,122,1) 89%, rgba(19,49,56,1) 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically */
+}
+
+.todo-app {
+  background: #fff; /* White background for the main content area */
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.dashboard {
+  background-color: #3498db; /* Change to a blue color for the dashboard */
+  color: #fff; /* White text for better readability */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px; /* Increase padding for better spacing */
+  border-bottom: 2px solid #2980b9; /* Add a border at the bottom */
+}
+
+.form-add-todo,
+.todo-edit-form {
+  background-color: #0fe2f1; /* Change to a yellow color */
+  padding: 8px 16px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #240dd4; /* Add a border at the bottom */
+}
+
+.form-add-todo > input,
+.todo-edit-form > [type=text] {
+  flex-grow: 1;
+  font-size: 16px; /* Adjust font size for better readability */
+  padding: 8px;
+  border: 1px solid #ccc; /* Add a border to input fields */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+.form-add-todo > button {
+  flex-shrink: 0; /* Prevent button from growing */
+  padding: 8px;
+  background-color: #e67e22; /* Change to an orange color */
+  color: #fff; /* White text for better readability */
+  border: none;
+  border-radius: 4px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+.form-add-todo > button:hover {
+  background-color: #d35400; /* Darken the background on hover */
+}
+
+.todo-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-item {
+  background-color: #ecf0f1; /* Change to a light gray color */
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #bdc3c7; /* Add a border */
+  border-radius: 4px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+.todo-item:hover {
+  background-color: #dfe6e9; /* Darken the background on hover */
+}
+
+.todo-item p {
+  width: 70%; /* Adjust width for better text wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-item .btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-item .btn-group a {
+  padding: 6px;
+  background-color: #95a5a6; /* Change to a gray color */
+  color: #fff; /* White text for better readability */
+  border: 1px solid #7f8c8d; /* Add a border */
+  border-radius: 4px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+.todo-item .btn-group a:hover {
+  background-color: #7f8c8d; /* Darken the background on hover */
+}
+
+.job-done {
+  text-decoration: line-through;
+  color: #95a5a6; /* Change to a gray color */
+}
+/* ... (your existing styles) */
+
+.form-add-todo > button,
+.todo-item .btn-group a {
+  flex-shrink: 0; /* Prevent button from growing */
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+.form-add-todo > button {
+  background-color: #4c5caf; /* Change to a green color */
+  color: #fff; /* White text for better readability */
+  font-size: 16px;
+}
+
+.form-add-todo > button:hover {
+  background-color: #0d5658; /* Darken the background on hover */
+}
+
+.todo-item .btn-group a {
+  background-color: #3498db; /* Change to a blue color */
+  color: #fff; /* White text for better readability */
+  font-size: 14px;
+  border: 2px solid #2980b9; /* Add a border */
+}
+
+.todo-item .btn-group a:hover {
+  background-color: #2980b9; /* Darken the background on hover */
+}
+/* TodoEditForm.css */
+
+.todo-edit-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.todo-edit-form input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todo-edit-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.todo-edit-form button {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-edit-form .save-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.todo-edit-form .save-button:hover {
+  background-color: #45a049;
+}
+
+.todo-edit-form .cancel-button {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.todo-edit-form .cancel-button:hover {
+  background-color: #c0392b;
+}
